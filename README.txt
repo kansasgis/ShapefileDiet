@@ -1,6 +1,15 @@
 Name:        Shapefile Diet
 Purpose:     Creates a "skinny" version of a shapefile with field lengths
-               that are appropriate for the value lengths
+               that are appropriate for the value lengths. Example: a 
+	       string field is defined as being 200 characters, but the 
+	       longest attribute is only 54 characters. The output 
+	       shapefile's matching field will be defined as 54 characters
+	       long. 
+	       
+	       This tool can drastically decrease the amount of space
+	       the shapefile uses on disk.
+
+	       See the output field map for all field details.
 
 NOTE:        Since shapefiles don't do nulls, null values are converted:
               text = ''
